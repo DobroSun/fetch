@@ -1,0 +1,137 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+	    "padding": {
+		    "top": 2,
+		    "left": 3,
+	    }
+    },
+
+    // PS1='\e[1;37m\u\e[0m \e[2;37m@\e[0m \e[1;34m\h\e[0m \e[2;37min\e[0m \w ⟫ '
+
+    "modules": [
+            // "format": "┌────────────────────── Hardware ──────────────────────┐",
+            // "format": "┌────────────────────── Software ──────────────────────┐",
+        {
+            "type": "custom",
+            "format": "┌──────────────────────────────────────────────────────┐",
+            "outputColor": "1;37"
+        },
+        {
+            "type": "os",
+            "key": "OS",
+            "keyColor": "2;37"
+        },
+        {
+            "type": "kernel",
+            "key": "│ ├ Kernel",
+            "keyColor": "2;37"
+        },
+        {
+            "type": "packages",
+            "key": "│ ├ Packages",
+            "keyColor": "2;37"
+        },
+        {
+            "type": "shell",
+            "key": "│ ├ Shell",
+            "keyColor": "2;37"
+        },
+        {
+            "type": "uptime",
+            "key": "│ ├ Uptime",
+            "keyColor": "2;37"
+        },
+        {
+            "type": "command",
+            "key": "└ └ OS Age",
+            "keyColor": "2;37",
+            "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days"
+        },
+        {
+            "type": "custom",
+            "format": "└──────────────────────────────────────────────────────┘",
+            "outputColor": "1;37"
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": "┌──────────────────────────────────────────────────────┐",
+            "outputColor": "1;37"
+        },
+        {
+            "type": "de",
+            "key": "DE",
+            "keyColor": "2;37"
+        },
+        {
+            "type": "wm",
+            "key": "│ ├ WM",
+            "keyColor": "2;37"
+        },
+        {
+            "type": "wmtheme",
+            "key": "│ ├ Theme",
+            "keyColor": "2;37"
+        },
+        {
+            "type": "terminal",
+            "key": "│ ├ Terminal",
+            "keyColor": "2;37"
+        },
+        {
+            "type": "InitSystem",
+            "key": "└ └ Init System",
+            "keyColor": "2;37"
+        },
+
+        {
+            "type": "custom",
+            "format": "└────────────────────────────────────────────────────┘",
+            "outputColor": "1;37"
+        },
+        "break",
+        {
+            "type": "custom",
+            "format": "┌──────────────────────────────────────────────────────┐",
+            "outputColor": "1;37"
+        },
+        {
+            "type": "title",
+            "key": "PC",
+	    "format": "{6} {7} {8}",
+	    "color": {
+		    "user": "1;37",
+		    "at": "2;37",
+		    "host": "1;34"
+	    },
+            "keyColor": "2;37"
+        },
+        {
+            "type": "cpu",
+            "key": "│ ├ CPU",
+            "keyColor": "2;37"
+        },
+        {
+            "type": "gpu",
+            "key": "│ ├ GPU",
+            "keyColor": "2;37"
+        },
+        {
+            "type": "disk",
+            "key": "│ ├ Disk ({mountpoint})",
+            "keyColor": "2;37"
+        },
+        {
+            "type": "memory",
+            "key": "└ └ Memory",
+            "keyColor": "2;37"
+        },
+
+        {
+            "type": "custom",
+            "format": "└──────────────────────────────────────────────────────┘",
+            "outputColor": "1;37"
+        },
+    ]
+}
